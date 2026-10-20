@@ -1,129 +1,1043 @@
 
-<!-- Featured Projects -->
-<section id="featured-projects" class="featured-projects">
-  <div class="section-heading">
-    <p class="eyebrow">SELECTED WORK</p>
-    <h2>Engineering, Research & Development</h2>
-    <p>
-      A selection of my work across mechanical design, EV development,
-      welding research, and engineering software.
-    </p>
-  </div>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="featured-projects-grid">
-    <article class="featured-project-card">
-      <span class="project-category">Research</span>
-      <h3>Dissimilar Welding Research</h3>
-      <p>
-        Investigating the microstructure and mechanical properties of
-        Inconel 718 and AISI 321 welded joints using a nickel interlayer.
-      </p>
-      <a href="project-welding.html">View project →</a>
-    </article>
+  <meta name="author" content="Alok Prakash">
+  <meta name="description"
+        content="Alok Prakash's engineering portfolio covering mechanical design, electric vehicles, materials research, welding, product development and engineering software.">
 
-    <article class="featured-project-card">
-      <span class="project-category">Mechanical Engineering</span>
-      <h3>Automotive Chassis Material Selection</h3>
-      <p>
-        Numerical simulation and statistical methods for evaluating
-        material options for an automotive chassis.
-      </p>
-      <a href="project-chassis.html">View project →</a>
-    </article>
+  <meta name="theme-color" content="#f7f5ef">
 
-    <article class="featured-project-card">
-      <span class="project-category">EV Development</span>
-      <h3>Electric Vehicle Development</h3>
-      <p>
-        Engineering work involving EV systems, vehicle integration,
-        testing, thermal validation, and component evaluation.
-      </p>
-      <a href="project-ev.html">View project →</a>
-    </article>
+  <title>Alok Prakash | Engineering Portfolio</title>
 
-    <article class="featured-project-card">
-      <span class="project-category">Engineering Tool</span>
-      <h3>Spring Designer</h3>
-      <p>
-        A project for calculating and evaluating spring design
-        parameters. Refer to the project page for its current status.
-      </p>
-      <a href="project-spring-calculator.html">View project →</a>
-    </article>
-  </div>
+  <link rel="stylesheet" href="style.css">
 
-  <div class="projects-cta">
-    <a class="view-all-projects" href="projects.html">
-      Explore all projects →
-    </a>
-  </div>
-</section>
+  <style>
+    /* Homepage-specific styles */
 
-<style>
-  .featured-projects {
-    padding: 64px 0;
-  }
-
-  .section-heading {
-    max-width: 720px;
-    margin-bottom: 28px;
-  }
-
-  .section-heading h2 {
-    margin: 8px 0 12px;
-  }
-
-  .eyebrow,
-  .project-category {
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .featured-projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .featured-project-card {
-    padding: 24px;
-    border: 1px solid var(--line, #dedbd2);
-    border-radius: 12px;
-    background: var(--surface, #fffdf8);
-  }
-
-  .featured-project-card h3 {
-    margin: 12px 0;
-  }
-
-  .featured-project-card p {
-    line-height: 1.7;
-    color: var(--muted, #666);
-  }
-
-  .featured-project-card a,
-  .view-all-projects {
-    display: inline-block;
-    margin-top: 8px;
-    font-weight: 700;
-    color: var(--text, #222);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-
-  .projects-cta {
-    margin-top: 24px;
-  }
-
-  @media (max-width: 640px) {
-    .featured-projects-grid {
-      grid-template-columns: 1fr;
+    :root {
+      --home-bg: #f7f5ef;
+      --home-surface: #fffefa;
+      --home-text: #252720;
+      --home-muted: #68695f;
+      --home-line: #deddd3;
+      --home-accent: #557568;
+      --home-accent-light: #e8eee8;
+      --home-highlight: #e9b96e;
+      --home-radius: 16px;
+      --home-width: 1120px;
     }
 
-    .featured-projects {
-      padding: 40px 0;
+    html[data-theme="dark"] {
+      --home-bg: #191b18;
+      --home-surface: #232620;
+      --home-text: #f1f0e8;
+      --home-muted: #b7b8ac;
+      --home-line: #41443b;
+      --home-accent: #a5c3b1;
+      --home-accent-light: #2c3830;
+      --home-highlight: #e9b96e;
     }
-  }
-</style>
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--home-bg);
+      color: var(--home-text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .home-container {
+      width: min(var(--home-width), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .home-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--home-line);
+      background: var(--home-bg);
+    }
+
+    .home-nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .home-brand {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .home-nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+    }
+
+    .home-nav-links a {
+      color: var(--home-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .home-nav-links a:hover,
+    .home-nav-links a[aria-current="page"] {
+      color: var(--home-text);
+    }
+
+    .home-theme-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      min-height: 42px;
+      padding: 8px 12px;
+      border: 1px solid var(--home-line);
+      border-radius: 10px;
+      background: var(--home-surface);
+      color: var(--home-text);
+      font: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .home-hero {
+      padding-block: 94px 78px;
+    }
+
+    .home-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.7fr);
+      align-items: center;
+      gap: 64px;
+    }
+
+    .home-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 20px;
+      color: var(--home-accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .home-eyebrow::before {
+      width: 24px;
+      height: 2px;
+      background: var(--home-highlight);
+      content: "";
+    }
+
+    .home-hero h1 {
+      max-width: 750px;
+      margin: 0;
+      font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+      font-weight: 800;
+      letter-spacing: -0.075em;
+      line-height: 1.04;
+    }
+
+    .home-hero h1 span {
+      color: var(--home-accent);
+    }
+
+    .home-hero-description {
+      max-width: 660px;
+      margin: 26px 0 0;
+      color: var(--home-muted);
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .home-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 11px 18px;
+      border: 1px solid var(--home-line);
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 160ms ease, opacity 160ms ease;
+    }
+
+    .home-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .home-button-primary {
+      border-color: var(--home-text);
+      background: var(--home-text);
+      color: var(--home-bg);
+    }
+
+    .home-button-secondary {
+      background: var(--home-surface);
+      color: var(--home-text);
+    }
+
+    .home-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      border: 1px solid var(--home-line);
+      border-radius: var(--home-radius);
+      background: var(--home-surface);
+      text-align: center;
+    }
+
+    .home-profile img {
+      display: block;
+      width: min(100%, 250px);
+      aspect-ratio: 4 / 5;
+      border-radius: 12px;
+      object-fit: cover;
+      object-position: center top;
+      background: var(--home-accent-light);
+    }
+
+    .home-profile-name {
+      margin: 18px 0 2px;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .home-profile-role {
+      margin: 0;
+      color: var(--home-muted);
+      font-size: 0.86rem;
+    }
+
+    .home-profile-location {
+      margin-top: 12px;
+      color: var(--home-muted);
+      font-size: 0.8rem;
+    }
+
+    .home-divider {
+      border: 0;
+      border-top: 1px solid var(--home-line);
+    }
+
+    .home-section {
+      padding-block: 76px;
+    }
+
+    .home-section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .home-section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -0.055em;
+      line-height: 1.2;
+    }
+
+    .home-section-heading p {
+      max-width: 570px;
+      margin: 12px 0 0;
+      color: var(--home-muted);
+    }
+
+    .home-text-link {
+      display: inline-block;
+      flex-shrink: 0;
+      color: var(--home-text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 5px;
+    }
+
+    .home-project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .home-project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 245px;
+      padding: 27px;
+      border: 1px solid var(--home-line);
+      border-radius: var(--home-radius);
+      background: var(--home-surface);
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+
+    .home-project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--home-accent);
+    }
+
+    .home-project-category {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: var(--home-accent-light);
+      color: var(--home-accent);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .home-project-card h3 {
+      margin: 17px 0 10px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.35;
+    }
+
+    .home-project-card p {
+      margin: 0 0 22px;
+      color: var(--home-muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .home-project-card .home-text-link {
+      margin-top: auto;
+    }
+
+    .home-research {
+      background: var(--home-surface);
+      border-block: 1px solid var(--home-line);
+    }
+
+    .home-research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .home-research-card {
+      padding: 23px;
+      border: 1px solid var(--home-line);
+      border-radius: 12px;
+      background: var(--home-bg);
+    }
+
+    .home-research-number {
+      color: var(--home-accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+    }
+
+    .home-research-card h3 {
+      margin: 14px 0 9px;
+      font-size: 1.08rem;
+    }
+
+    .home-research-card p {
+      margin: 0;
+      color: var(--home-muted);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .home-experience-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--home-line);
+    }
+
+    .home-experience-item {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 30px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--home-line);
+    }
+
+    .home-experience-date {
+      color: var(--home-muted);
+      font-size: 0.84rem;
+    }
+
+    .home-experience-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .home-experience-company {
+      margin: 4px 0 10px;
+      color: var(--home-accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .home-experience-item p:last-child {
+      margin: 0;
+      color: var(--home-muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .home-contact {
+      padding-block: 68px;
+      border-top: 1px solid var(--home-line);
+      background: var(--home-surface);
+    }
+
+    .home-contact-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+    }
+
+    .home-contact h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      letter-spacing: -0.055em;
+    }
+
+    .home-contact p {
+      max-width: 570px;
+      margin: 12px 0 0;
+      color: var(--home-muted);
+    }
+
+    .home-contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .home-footer {
+      padding-block: 24px;
+      border-top: 1px solid var(--home-line);
+    }
+
+    .home-footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .home-footer p,
+    .home-footer a {
+      margin: 0;
+      color: var(--home-muted);
+      font-size: 0.8rem;
+    }
+
+    .home-footer a {
+      text-decoration: none;
+    }
+
+    .home-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .home-nav {
+        flex-wrap: wrap;
+        padding-block: 14px;
+      }
+
+      .home-nav-links {
+        gap: 14px;
+      }
+
+      .home-hero-grid {
+        grid-template-columns: minmax(0, 1fr) 220px;
+        gap: 32px;
+      }
+
+      .home-research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .home-section-heading {
+        align-items: flex-start;
+      }
+
+      .home-contact-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .home-container {
+        width: calc(100% - 32px);
+      }
+
+      .home-nav {
+        align-items: flex-start;
+      }
+
+      .home-nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px 17px;
+      }
+
+      .home-nav-links a {
+        font-size: 0.82rem;
+      }
+
+      .home-hero {
+        padding-block: 55px;
+      }
+
+      .home-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .home-hero h1 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+      }
+
+      .home-profile {
+        width: auto;
+        max-width: 320px;
+      }
+
+      .home-profile img {
+        width: 200px;
+      }
+
+      .home-section {
+        padding-block: 54px;
+      }
+
+      .home-section-heading {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .home-project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .home-project-card {
+        min-height: auto;
+        padding: 22px;
+      }
+
+      .home-experience-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .home-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="home-header">
+    <div class="home-container home-nav">
+      <a class="home-brand" href="index.html">Alok Prakash<span>.</span></a>
+
+      <nav class="home-nav-links" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+
+        <button
+          id="themeToggle"
+          class="home-theme-button"
+          type="button"
+          aria-label="Change colour theme"
+          title="Change colour theme">
+          Theme
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="home-hero">
+      <div class="home-container home-hero-grid">
+
+        <div>
+          <p class="home-eyebrow">Engineering · Research · Product Development</p>
+
+          <h1>
+            Designing systems.<br>
+            Solving <span>problems.</span>
+          </h1>
+
+          <p class="home-hero-description">
+            I am an engineering and product development professional
+            working across electric vehicles, mechanical design,
+            materials engineering, testing, and research. My work
+            combines engineering fundamentals with practical
+            development, validation, and data-driven problem-solving.
+          </p>
+
+          <div class="home-hero-actions">
+            <a class="home-button home-button-primary" href="projects.html">
+              Explore projects →
+            </a>
+
+            <a class="home-button home-button-secondary" href="about.html">
+              About me
+            </a>
+
+            <a class="home-button home-button-secondary"
+               href="https://www.linkedin.com/in/thealokprakash/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+
+        <aside class="home-profile">
+          <img
+            src="assets/profile.png"
+            alt="Alok Prakash"
+            width="400"
+            height="500"
+            onerror="this.style.display='none'">
+
+          <p class="home-profile-name">Alok Prakash</p>
+          <p class="home-profile-role">
+            Mechanical Engineering & Product Development
+          </p>
+          <p class="home-profile-location">
+            Gurugram, India
+          </p>
+        </aside>
+
+      </div>
+    </section>
+
+    <hr class="home-divider">
+
+    <!-- Featured Projects -->
+    <section class="home-section" id="featured-projects">
+      <div class="home-container">
+
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">Selected Work</p>
+            <h2>Projects & Engineering Work</h2>
+            <p>
+              Selected work spanning welding research, automotive
+              engineering, electric vehicle development, and
+              engineering tools.
+            </p>
+          </div>
+
+          <a class="home-text-link" href="projects.html">
+            View all projects →
+          </a>
+        </div>
+
+        <div class="home-project-grid">
+
+          <article class="home-project-card">
+            <span class="home-project-category">Materials Research</span>
+            <h3>Dissimilar Welding of Inconel 718 and AISI 321</h3>
+            <p>
+              Research on P-TIG welding, nickel interlayers,
+              microstructural characterisation, and mechanical
+              properties of dissimilar welded joints.
+            </p>
+            <a class="home-text-link" href="project-welding.html">
+              Read case study →
+            </a>
+          </article>
+
+          <article class="home-project-card">
+            <span class="home-project-category">Automotive Engineering</span>
+            <h3>Automotive Chassis Material Selection</h3>
+            <p>
+              Numerical simulation and statistical methods applied
+              to evaluating material options for an automotive chassis.
+            </p>
+            <a class="home-text-link" href="project-chassis.html">
+              Read case study →
+            </a>
+          </article>
+
+          <article class="home-project-card">
+            <span class="home-project-category">Electric Vehicles</span>
+            <h3>EV Development & Validation</h3>
+            <p>
+              Vehicle integration, component evaluation, thermal
+              validation, and engineering testing across electric
+              vehicle systems.
+            </p>
+            <a class="home-text-link" href="project-ev.html">
+              Read case study →
+            </a>
+          </article>
+
+          <article class="home-project-card">
+            <span class="home-project-category">Mechanical Design</span>
+            <h3>Spring Design Calculator</h3>
+            <p>
+              An engineering tool concept for evaluating spring
+              parameters and supporting preliminary design calculations.
+              Check the project page for implementation status.
+            </p>
+            <a class="home-text-link"
+               href="project-spring-calculator.html">
+              View project →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="home-section home-research" id="research">
+      <div class="home-container">
+
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">Technical Focus</p>
+            <h2>Research & Engineering Interests</h2>
+            <p>
+              Areas where I apply experimental methods, engineering
+              analysis, and practical validation.
+            </p>
+          </div>
+
+          <a class="home-text-link" href="research.html">
+            Explore research →
+          </a>
+        </div>
+
+        <div class="home-research-grid">
+
+          <article class="home-research-card">
+            <span class="home-research-number">01 / MATERIALS</span>
+            <h3>Welding & Characterisation</h3>
+            <p>
+              Dissimilar metal joining, TIG and P-TIG welding,
+              microscopy, SEM-EDS, EBSD, microhardness, and
+              tensile testing.
+            </p>
+          </article>
+
+          <article class="home-research-card">
+            <span class="home-research-number">02 / MECHANICAL</span>
+            <h3>Design & Simulation</h3>
+            <p>
+              Mechanical component design, CAD, finite element
+              analysis, materials selection, GD&T, and
+              engineering validation.
+            </p>
+          </article>
+
+          <article class="home-research-card">
+            <span class="home-research-number">03 / MOBILITY</span>
+            <h3>EV Systems & Development</h3>
+            <p>
+              Vehicle integration, subsystem testing, thermal
+              validation, reliability investigation, and
+              product development.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="home-section" id="experience">
+      <div class="home-container">
+
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">Professional Background</p>
+            <h2>Experience</h2>
+            <p>
+              Experience across product development, electric
+              mobility, vehicle engineering, and technical projects.
+            </p>
+          </div>
+
+          <a class="home-text-link" href="experience.html">
+            Full experience →
+          </a>
+        </div>
+
+        <div class="home-experience-list">
+
+          <article class="home-experience-item">
+            <div class="home-experience-date">
+              Jan 2025 – Present
+            </div>
+            <div>
+              <h3>Associate Product Development Manager</h3>
+              <p class="home-experience-company">Baaz Bikes</p>
+              <p>
+                Working on electric vehicle product development,
+                subsystem validation, component qualification,
+                engineering investigations, and cross-functional
+                product delivery.
+              </p>
+            </div>
+          </article>
+
+          <article class="home-experience-item">
+            <div class="home-experience-date">
+              Nov 2023 – Dec 2024
+            </div>
+            <div>
+              <h3>Product Development Engineer</h3>
+              <p class="home-experience-company">EMotorad</p>
+              <p>
+                Contributed to electric vehicle development,
+                vehicle integration, component evaluation,
+                benchmarking, and engineering testing.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="home-section home-research" id="education">
+      <div class="home-container">
+
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">Academic Background</p>
+            <h2>Education</h2>
+          </div>
+        </div>
+
+        <div class="home-experience-list">
+
+          <article class="home-experience-item">
+            <div class="home-experience-date">
+              2021 – 2023
+            </div>
+            <div>
+              <h3>M.Tech — Design and Manufacturing</h3>
+              <p class="home-experience-company">
+                National Institute of Technology, Silchar
+              </p>
+              <p>
+                Research focused on dissimilar welding, materials
+                characterisation, and the mechanical properties
+                of welded joints.
+              </p>
+            </div>
+          </article>
+
+          <article class="home-experience-item">
+            <div class="home-experience-date">
+              2017 – 2021
+            </div>
+            <div>
+              <h3>B.Tech — Mechanical Engineering</h3>
+              <p class="home-experience-company">
+                Lovely Professional University
+              </p>
+              <p>
+                Foundation in mechanical design, manufacturing,
+                materials, and engineering analysis.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="home-section" id="publications">
+      <div class="home-container">
+
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">Published Research</p>
+            <h2>Publications</h2>
+            <p>
+              Research contributions in welding technology and
+              automotive chassis material selection.
+            </p>
+          </div>
+
+          <a class="home-text-link" href="publications.html">
+            All publications →
+          </a>
+        </div>
+
+        <article class="home-project-card">
+          <span class="home-project-category">Springer · 2025</span>
+          <h3>
+            Effect of P-TIG Welding Technique on the Microstructure
+            and Mechanical Properties of Dissimilar Welded Inconel
+            718 and AISI 321 Butt Joint
+          </h3>
+          <p>
+            Published in Lecture Notes in Mechanical Engineering.
+          </p>
+          <a class="home-text-link"
+             href="https://doi.org/10.1007/978-981-96-6632-4_4"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read publication →
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="home-contact" id="contact">
+      <div class="home-container home-contact-inner">
+
+        <div>
+          <p class="home-eyebrow">Get in Touch</p>
+          <h2>Let's connect.</h2>
+          <p>
+            For engineering collaboration, research discussions,
+            product development, or professional opportunities,
+            you can reach me through the links below.
+          </p>
+        </div>
+
+        <div class="home-contact-links">
+          <a class="home-button home-button-primary"
+             href="mailto:thealokprakash@gmail.com">
+            Email me →
+          </a>
+
+          <a class="home-button home-button-secondary"
+             href="https://www.linkedin.com/in/thealokprakash/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+
+          <a class="home-button home-button-secondary"
+             href="https://scholar.google.com/citations?user=iQqaaKMAAAAJ"
+             target="_blank"
+             rel="noopener noreferrer">
+            Google Scholar ↗
+          </a>
+
+          <a class="home-button home-button-secondary"
+             href="https://github.com/thealokprakash"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="home-footer">
+    <div class="home-container home-footer-inner">
+      <p>© <span id="currentYear"></span> Alok Prakash</p>
+
+      <div class="home-footer-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/thealokprakash"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+
+  <script>
+    // Update the footer year automatically.
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
