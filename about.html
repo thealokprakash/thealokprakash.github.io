@@ -1,55 +1,255 @@
 
-<!-- CV and professional links -->
-<div class="about-actions">
-  <a class="about-action about-action-primary"
-     href="assets/cv.pdf"
-     target="_blank"
-     rel="noopener">
-    View CV ↗
-  </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="About Alok Prakash — engineering background, education, technical interests, and professional approach.">
+  <title>About | Alok Prakash</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
 
-  <a class="about-action"
-     href="https://www.linkedin.com/in/thealokprakash/"
-     target="_blank"
-     rel="noopener noreferrer">
-    LinkedIn ↗
-  </a>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html">Alok Prakash<span>.</span></a>
 
-  <a class="about-action"
-     href="https://scholar.google.com/citations?user=iQqaaKMAAAAJ"
-     target="_blank"
-     rel="noopener noreferrer">
-    Google Scholar ↗
-  </a>
-</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+      </nav>
 
-<style>
-  .about-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 24px 0;
-  }
+      <button id="themeToggle" class="theme-toggle" type="button">
+        ☾ Dark
+      </button>
+    </div>
+  </header>
 
-  .about-action {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 11px 17px;
-    border: 1px solid var(--line, #dedbd2);
-    border-radius: 8px;
-    color: var(--text, #222);
-    text-decoration: none;
-    font-weight: 600;
-  }
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow">ABOUT ME</p>
+        <h1>Engineering ideas into practical solutions.</h1>
+        <p class="section-intro">
+          My background combines mechanical engineering, materials research,
+          electric vehicle development, and hands-on product engineering.
+        </p>
+      </div>
+    </section>
 
-  .about-action-primary {
-    background: var(--text, #222);
-    color: var(--surface, #fffdf8);
-    border-color: var(--text, #222);
-  }
+    <section class="section">
+      <div class="container">
+        <div class="grid about-grid">
+          <article class="card about-main">
+            <p class="eyebrow">BACKGROUND</p>
+            <h2>My journey</h2>
 
-  .about-action:hover {
-    opacity: 0.8;
-  }
-</style>
+            <p>
+              I am a mechanical engineer with a postgraduate specialisation
+              in Design and Manufacturing from the National Institute of
+              Technology Silchar. My interests span mechanical design,
+              materials engineering, manufacturing processes, and product
+              development.
+            </p>
+
+            <p>
+              My professional experience includes electric vehicle
+              development, vehicle subsystem integration, component
+              validation, manufacturing coordination, and engineering
+              problem-solving. I have worked across the product lifecycle,
+              from concept development and design decisions to testing,
+              troubleshooting, and production support.
+            </p>
+
+            <p>
+              My academic research focused on dissimilar-metal welding of
+              Inconel 718 and AISI 321 stainless steel using a nickel
+              interlayer. This work involved welding-process development,
+              microstructural characterisation, and mechanical-property
+              evaluation.
+            </p>
+
+            <p>
+              I enjoy working on problems that require both analytical
+              thinking and practical implementation, particularly where
+              material behaviour, design decisions, manufacturing
+              constraints, and product performance intersect.
+            </p>
+          </article>
+
+          <aside class="card about-details">
+            <p class="eyebrow">QUICK PROFILE</p>
+            <h2>At a glance</h2>
+
+            <div class="detail-item">
+              <span class="detail-label">Current field</span>
+              <p>Electric vehicle product development</p>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-label">Postgraduate degree</span>
+              <p>M.Tech, Design and Manufacturing</p>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-label">Undergraduate degree</span>
+              <p>B.Tech, Mechanical Engineering</p>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-label">Research focus</span>
+              <p>Dissimilar-metal welding and materials characterisation</p>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-label">Technical interests</span>
+              <p>Mechanical design, EV systems, manufacturing, and testing</p>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-label">Location</span>
+              <p>India</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="sectionhead">
+          <div>
+            <p class="eyebrow">EDUCATION</p>
+            <h2>Academic foundation</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="card timeline-item">
+            <p class="eyebrow">2021–2023</p>
+            <h3>M.Tech in Design and Manufacturing</h3>
+            <p class="institution">National Institute of Technology Silchar</p>
+            <p>
+              Postgraduate work involving dissimilar-metal joining,
+              welding-process investigation, microstructure, and
+              mechanical-property analysis.
+            </p>
+          </article>
+
+          <article class="card timeline-item">
+            <p class="eyebrow">2017–2021</p>
+            <h3>B.Tech in Mechanical Engineering</h3>
+            <p class="institution">Lovely Professional University</p>
+            <p>
+              Undergraduate foundation in mechanical systems, engineering
+              design, manufacturing, materials, and applied engineering.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="sectionhead">
+          <div>
+            <p class="eyebrow">TECHNICAL TOOLKIT</p>
+            <h2>Skills and methods</h2>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Design and Analysis</h3>
+            <div class="tag-list">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">ANSYS</span>
+              <span class="tag">CAD</span>
+              <span class="tag">FEA</span>
+              <span class="tag">GD&T</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Materials and Testing</h3>
+            <div class="tag-list">
+              <span class="tag">TIG Welding</span>
+              <span class="tag">P-TIG Welding</span>
+              <span class="tag">SEM-EDS</span>
+              <span class="tag">EBSD</span>
+              <span class="tag">Microhardness</span>
+              <span class="tag">Tensile Testing</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Product Engineering</h3>
+            <div class="tag-list">
+              <span class="tag">EV Systems</span>
+              <span class="tag">DFMEA</span>
+              <span class="tag">Root Cause Analysis</span>
+              <span class="tag">Validation</span>
+              <span class="tag">Manufacturing</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Computational Tools</h3>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">SciPy</span>
+              <span class="tag">SQL</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">LaTeX</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-card card">
+          <p class="eyebrow">EXPLORE FURTHER</p>
+          <h2>See my work in practice.</h2>
+          <p>
+            Explore my engineering projects, research activities,
+            publications, and professional experience.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="projects.html">View Projects</a>
+            <a class="btn btn-secondary" href="publications.html">
+              Publications
+            </a>
+            <a class="btn btn-secondary" href="experience.html">
+              Experience
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="currentYear">2026</span> Alok Prakash</p>
+      <p>Engineering · Research · Product Development</p>
+    </div>
+  </footer>
+
+  <script>
+    const yearElement = document.getElementById("currentYear");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
