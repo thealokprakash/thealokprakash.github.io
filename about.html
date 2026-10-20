@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Alok Prakash</title>
+<meta name="description" content="Alok Prakash &ndash; mechanical engineering, materials science, welding metallurgy and EV product development.">
+<meta name="author" content="Alok Prakash">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#080d1b">
+
+<link rel="canonical" href="https://thealokprakash.github.io/about.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About | Alok Prakash">
+<meta property="og:description" content="Alok Prakash &ndash; mechanical engineering, materials science, welding metallurgy and EV product development.">
+<meta property="og:url" content="https://thealokprakash.github.io/about.html">
+<meta property="og:image" content="https://thealokprakash.github.io/assets/profile.jpg">
+<meta name="twitter:card" content="summary">
+
+<!-- Set the theme before first paint (no flash). Dark is the default. -->
+<script>
+(function () {
+  var r = document.documentElement, m = 'dark';
+  try { m = localStorage.getItem('theme-mode') || 'dark'; } catch (e) {}
+  if (m !== 'light' && m !== 'auto') m = 'dark';
+  var dark = m === 'dark' || (m === 'auto' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+  r.setAttribute('data-mode', m);
+  r.setAttribute('data-theme', dark ? 'dark' : 'light');
+  r.className += ' js';
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="index.html">Alok<span>.</span>Prakash</a>
+    <button class="navbtn" type="button" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+    <nav id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="projects.html">Projects</a><a href="experience.html">Experience</a>
+      <a href="assets/cv.pdf" data-cv hidden>CV &#8599;</a>
+      <button class="themebtn" id="theme-btn" type="button" aria-label="Colour theme. Select to change.">&#9680; <span id="theme-label">Dark</span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap pagehero">
+    <div class="eyebrow">Profile</div>
+    <h1>About <span>Alok</span></h1>
+    <p class="lead">Mechanical engineer with a research foundation in materials and manufacturing, and hands-on experience developing electric vehicles.</p>
+  </div>
+  <section class="section" aria-labelledby="bg-title">
+    <div class="wrap split">
+      <div class="reveal">
+        <div class="kicker">Academic background</div>
+        <h2 id="bg-title">Design, materials &amp; manufacturing</h2>
+        <p class="muted">I completed an M.Tech in Design and Manufacturing at the National Institute of Technology Silchar. My thesis examined dissimilar joining of a Ni-based superalloy and austenitic stainless steel using TIG welding with a Ni interlayer.</p>
+        <p class="muted">My interests include welding metallurgy, material characterisation, microstructure&ndash;property relationships, computational mechanics, advanced manufacturing, and data-driven engineering.</p>
+        <p class="muted">In industry I have taken electric scooters and chassis from design through validation and manufacturing.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon" aria-hidden="true">&#127891;</div>
+        <h3>Education</h3>
+        <p><b style="color:var(--text)">M.Tech, Design and Manufacturing</b><br>NIT Silchar &middot; 2021&ndash;2023 &middot; CGPA 7.36/10</p>
+        <div class="bar"></div>
+        <p><b style="color:var(--text)">B.Tech, Mechanical Engineering</b><br>Lovely Professional University &middot; 2017&ndash;2021 &middot; CGPA 7.88/10</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footerin">
+    <span>&copy; 2026 Alok Prakash &middot; Mechanical Engineering &amp; Materials Research</span>
+    <span class="links">
+      <a href="mailto:thealokprakash@gmail.com">Email</a>
+      <a href="https://scholar.google.com/citations?user=iQqaaKMAAAAJ" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/thealokprakash/" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/thealokprakash" rel="noopener">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
